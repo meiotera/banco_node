@@ -210,9 +210,16 @@ function saque() {
         if(!conta) return depositar();        
 
         valor(menssagem, (valorSaque) => {
-            const novoSaldo = parseFloat(conta.saldo) - parseFloat(valorSaque);
-
-            conta.saldo = novoSaldo;
+            
+            if(conta.saldo < valorSaque) {
+                console.log(chalk.bgRed(`Saldo menor que R$${valorSaque}`));
+                saque();
+                return;
+            } else {
+                const novoSaldo = parseFloat(conta.saldo) - parseFloat(valorSaque);
+                conta.saldo = novoSaldo;
+            }
+            
 
             fs.writeFileSync(
                 `accounts/${resposta['conta']}.json`,
