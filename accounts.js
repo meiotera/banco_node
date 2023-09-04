@@ -207,7 +207,7 @@ function saque() {
         const menssagem = 'sacar';              
         const conta = pegarConta(resposta['conta']);       
         
-        if(!conta) return sacar();        
+        if(!conta) return saque();        
 
         valor(menssagem, (valorSaque) => {
             
