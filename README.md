@@ -1,4 +1,3 @@
-# banco_node
 
 # Aplicativo de Banco
 
@@ -29,3 +28,6 @@ Depositar: Permite depositar dinheiro em uma conta existente.
 Sacar: Permite sacar dinheiro de uma conta existente.
 
 Sair: Fecha o aplicativo.
+
+
+![gift video](video/conta_node.gif)
